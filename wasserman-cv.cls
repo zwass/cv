@@ -8,7 +8,6 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
@@ -28,11 +27,11 @@
 \definecolor{blue}{HTML}{6CE0F1}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
+  % \colorlet{green}{gray}
+  % \colorlet{orange}{gray}
+  % \colorlet{purple}{gray}
+  % \colorlet{red}{gray}
+  % \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -72,7 +71,7 @@
 
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2.5cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
@@ -82,7 +81,7 @@
       \thinfont #3%
     };
   \end{tikzpicture}
-  \vspace{2.5cm}
+  \vspace{.5cm}
   \vspace{-2\parskip}
 }
 
@@ -90,7 +89,21 @@
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
+
+%don't break words at end of line
+\hyphenpenalty=10000
+
 \RequirePackage{parskip}
+
+%remove margins on lists
+\def\@listI{\vspace{-12pt}\leftmargin\z@
+  \topsep\z@ \parsep\z@ \itemsep\z@}
+\let\@listi\@listI
+\@listi
+
+%change list style
+\renewcommand{\labelitemi}{$-$}
+
 
 \newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{%
@@ -100,8 +113,8 @@
         blue\or%
         red\or%
         orange\or%
-        green\or%
-        purple\else%
+        purple\or%
+        green\else%
         headercolor\fi%
     } #1#2#3%
   }%
@@ -109,12 +122,12 @@
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  %\par%\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  %\par%\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[2]{
@@ -138,10 +151,10 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+  {\footnotesize\addfontfeature{Color=lightgray} #1}&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    \emph{#3}\\%
     #4\vspace{\parsep}%
   }\\}
 
@@ -173,6 +186,7 @@
 %%%%%%%%%%%%%%%%
 
 \RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\nocite{*}
 
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
@@ -281,5 +295,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1.8cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}

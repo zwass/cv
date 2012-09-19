@@ -1,132 +1,170 @@
 %!TEX TS-program = xelatex
+%\documentclass[]{friggeri-cv}
 \documentclass[]{friggeri-cv}
 \addbibresource{bibliography.bib}
 
 \begin{document}
-\header{adrien}{friggeri}
-       {social network analyst}
+\header{Zachary}{Wasserman}
+       
 
 
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{about}
-    31 rue Smith
-    69002 Lyon
-    France
-    ~
-    \href{mailto:adrien@friggeri.net}{adrien@friggeri.net}
-    \href{http://friggeri.net}{http://friggeri.net}
-    \href{http://facebook.com/adrien}{fb://adrien}
-  \section{languages}
-    bilingual french/english
-    spanish \& italian notions
-  \section{programming}
-    {\color{red} $\varheartsuit$} JavaScript
-    (ES5, node.js)
-    Python, C, OCaml
-    CSS3 \& HTML5
+  4112 Spruce St.
+  Apt. \#6
+  Philadelphia, PA 19104
+  ~
+  \href{mailto:zwass@seas.upenn.edu}{zwass@seas.upenn.edu}
+  \href{http://zwass.com}{zwass.com}
+  \href{http://github.com/zwass}{github.com/zwass}
+  \section{tech}
+  Python, Java,
+  C, Haskell,
+  Hadoop/HBase,
+  SQL, Bash, Git, SVN
 \end{aside}
 
-\section{interests}
-
-complex networks, social networks, community detection, community structure,
-overlapping communities, information diffusion, viral marketing, social
-inference, recommendation, data mining
-
+\vspace{\parskip}
 \section{education}
 
 \begin{entrylist}
   \entry
-    {since 2009}
-    {Ph.D. {\normalfont candidate in Computer Science}}
-    {DNET/INRIA, LIP/ÉNS de Lyon}
-    {\emph{A Quantified Theory of Social Cohesion.}}
-  \entry
-    {2007–2008}
-    {M.Sc. magna cum laude}
-    {IXXI, École Normale Supérieure de Lyon}
-    {Majoring in Computer Science\\
-    Specialization in Complex Systems}
-  \entry
-    {2006–2007}
-    {B.Sc. magna cum laude}
-    {École Normale Supérieure de Lyon}
-    {Majoring in Computer Science}
-  \entry
-    {2003–2006}
-    {Classes Préparatoires aux Grandes Écoles}
-    {Lycée Fénelon, Lycée Louis le Grand, Paris}
-    {Preparation for national competitive entrance exams to leading French ``grandes écoles'', specializing in mathematics and physics.}
-  \entry
-    {2003}
-    {French Baccalauréat S. with honors}
-    {Lycée Louis le Grand, Paris}
-    {Specialization in mathematics and physics}
+    {May 2013}
+    {University of Pennsylvania}
+    {B.S.E. in Computer Science}
+    {\begin{itemize}
+      \item 3.94/4.0 Major GPA (19 classes) – 3.78/4.0 Overall GPA
+      \item Awarded Dean’s List 2009-2010, 2010-2011, 2011-2012 for strong GPA
+      \item Relevant Coursework: \emph{Algorithms, Data Structures, Operating Systems,\\
+          Distributed Systems*, Security*, Databases, Advanced
+          Programming*,\\ Intro/Advanced Architecture, Discrete Math,
+          Theory of Computation}\\
+        **graduate level class
+      \item Leader of PennQuest pre-orientation backpacking program to
+        help integrate incoming students into campus life (2010-2012)
+    \end{itemize}
+    }
 \end{entrylist}
 
 \section{experience}
 
 \begin{entrylist}
   \entry
-    {02–07 2009}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Visualization of complex networks.}}
+  {Summer '12}
+  {\href{http://opower.com/}{Opower}}
+  {Software Engineer Intern}
+  {\begin{itemize}
+    \item \href{http://kpcbfellows.com/}{\emph{KPCB Engineering
+          Fellow}} on the Data Services team
+    \item Built Hadoop/HBase implementations of core data
+      infrastructure for disaggregating heating/cooling from overall
+      customer energy usage
+    \item Increased efficiency of analysis by 100x
+      with MapReduce implementation
+    \item Explored performance of HBase queries to optimize analysis
+      algorithms
+    \end{itemize}}
   \entry
-    {06–08 2008}
-    {ISCPIF/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Diffusion in the Blogosphere. Happy Flu.}}
+  {2010-2012}
+  {UPenn Distributed Systems Lab}
+  {P25 Security Project Researcher}
+  {\begin{itemize}
+    \item Hacked on radio scanner custom firmware used to perform
+      data collection
+    \item Implemented prototype attack on the P25 protocol using
+      software defined radio
+    \end{itemize}}
   \entry
-    {06–08 2007}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Kernels in real world networks.}}
+  {Summer '11}
+  {\href{http://hulu.com}{Hulu}}
+  {Software Engineer Intern}
+  {\begin{itemize}
+    \item Built an automation system for the company’s virtual servers
+      (\'{a} la Amazon EC2)
+    \item Created a RESTful API as an abstraction layer between VM
+      hypervisor and frontend clients in Python
+    \item Cached VM usage metrics to improve response time by an order
+      of magnitude
+    \item Implemented a web-based frontend in Python and Mako
+    \end{itemize}}
   \entry
-    {07–08 2005}
-    {\href{http://www.kelkoo.com}{Kelkoo.com}}
-    {Summer job.}
-    {\emph{Creation of a keyword generator for Google Adwords.}}
+  {2011}
+  {University of Pennsylvania}
+  {CIS240 Teaching Assistant}
+  {\begin{itemize}
+    \item Taught introductory computer architecture and C
+      programming concepts
+    \end{itemize}}
   \entry
-    {07–08 2004}
-    {\href{http://www.monsieurprix.com}{MonsieurPrix.com}}
-    {Summer job.}
-    {\emph{Development of an e-commerce product indexation spider.}}
+  {2009-2010}
+  {The Daily Pennsylvanian}
+  {Lead Online Developer}
+  {\begin{itemize}
+    \item Optimized database to eliminate crashes (50,000+ daily
+      pageviews)
+    \item Designed a new menu bar and polished page templates for
+      \href{http://www.thedp.com}{thedp.com} in PHP
+    \item Recruited and supervised a 6-person staff of engineers
+    \end{itemize}
+  }
+  \entry
+  {2005-2007}
+  {University of California, Berkeley}
+  {\href{http://gamescrafters.berkeley.edu/}{Gamescrafters} Researcher}
+  {\begin{itemize}
+    \item Coded logic for solving the board game ``Toot and Otto'' in C
+    \item Created a GUI in Tcl/Tk to play against
+      a perfect computer opponent
+    \end{itemize}}
 \end{entrylist}
 
-\section{applications}
+\section{projects}
 
 \begin{entrylist}
   \entry
-    {2012}
-    {Who did I forget ?}
-    {\href{http://whodidiforget.com}{whodidiforget.com}}
-    {Guest list recommendation for Facebook events based on friends already attending the event.}
+  {2012}
+  {lpControl}
+  {\href{https://github.com/zwass/lpControl}{github.com/zwass/lpControl}}
+  {\begin{itemize}
+    \item Interpret rotation of a vinyl record as a computer input device
+    \item Manipulating the record controls Spotify, or dials a virtual rotary phone
+    \item \emph{Awarded Organizer's Choice} at PennApps Hackathon September
+      2012
+    \end{itemize}}
   \entry
-    {2011}
-    {Fellows}
-    {\href{http://fellows-exp.com}{fellows-exp.com}}
-    {Automatic community detection among Facebook Friends in order to validate the \emph{cohesion} measure, creation of friend lists.}
+  {2012}
+  {Distribuchat}
+  {\href{https://github.com/zwass/distribuchat}{github.com/zwass/distribuchat}}
+  {\begin{itemize}
+    \item Distributed chat implemented in C with
+      reliable, in-order transmission over UDP
+    \item Fault tolerance through distributed leader election algorithm
+    \end{itemize}}
   \entry
-    {2008}
-    {Happy Flu}
-    {\href{http://happyflu.com}{happyflu.com}}
-    {Experiment aimed to measure viral spreading of content across the blogosphere.}
+  {2012}
+  {Roadtrippin'}
+  {\href{http://rdtripp.in}{rdtripp.in}}
+  {\begin{itemize}
+    \item Help users plan road trips by solving the travelling
+      salesman problem and routing through their Facebook friends
+    \item \emph{Won third place} at PennApps Hackathon January 2012
+    \end{itemize}}
+  % \entry
+  % {2012}
+  % {Twitter Bots}
+  % {\href{http://twitter.com/KindaNewsy}{@KindaNewsy},
+  %   \href{http://twitter.com/pulakyelling}{@pulakyelling}}
+  % {\begin{itemize}
+  %   \item Joke Twitter bots: Scrape news articles to generate
+  %     plausible text with Markov Chains, retweet a friend with
+  %     caps lock on
+  %   \item Framework to enable rapid creation of new bots
+  %   \end{itemize}}
 \end{entrylist}
 
-\section{publications}
-
-
-\printbibsection{article}{article in peer-reviewed journal}
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-\end{refsection}
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-\end{refsection}
-\printbibsection{misc}{other publications}
-\printbibsection{report}{research reports}
+\section{research}
+\vspace{2\parskip}
+\printbibliography[type=inproceedings, heading=none]
 
 \end{document}
