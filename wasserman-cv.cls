@@ -1,4 +1,4 @@
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
+\ProvidesClass{wasserman-cv}[2012/09/21 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -71,7 +71,7 @@
 
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2.5cm] (box) at (current page.north){};
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2.2cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
@@ -151,7 +151,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  {\footnotesize\addfontfeature{Color=lightgray} #1}&\parbox[t]{11.8cm}{%
+  {\footnotesize\addfontfeature{Color=lightgray} #1}&\parbox[t]{13.3cm}{%
     \textbf{#2}%
     \hfill%
     \emph{#3}\\%
@@ -171,7 +171,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.65}(1, 4.33) %{width}(x, y)
   \begin{flushright}
   \obeycr
 }{%
@@ -295,5 +295,9 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1.8cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[left=5.1cm,top=2cm,right=1cm,bottom=1.8cm,nohead,nofoot]{geometry}
+% \@ifpackageloaded{tex4ht}{%
+%   \RequirePackage[tex4ht]{hyperref}
+% }{%
+  \AtBeginDocument{\RequirePackage{hyperref}}
+%}
